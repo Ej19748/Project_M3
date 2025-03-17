@@ -59,7 +59,7 @@ double NumberArray::getMax() const {
   return maxVal;
 }
 void NumberArray::printArray() const {
-  if (int i = 0; i < size; i++) {
+  for (int i = 0; i < size; i++) {
     cout << fixed << setprecision(1) << arr[i] << " ";
   }
   cout << endl;
