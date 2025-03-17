@@ -18,7 +18,7 @@ public:
   ~NumberArray();
   void setNumber(int index, double value);
   double getNumber(int index) const;
-  double geMin() const;
+  double getMin() const;
   double getMax() const;
   double getAverage() const;
   void printArray() const;
