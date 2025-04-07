@@ -1,0 +1,12 @@
+Implementation
+The collaboration analysis shows that objects of the police office class are the main drivers of the system and that the police office class is dependent on information encapsulated in the parked car object and the parking meter object. This dependency can be implemented using composition (strong “has-a” relationship) where parked car and parking meter objects  are instance variables of the police office class and are completely controlled by the police officer class. In this case, the information required to initialize these objects would be passed to the police office object through its constructor and the police officer constructor would invoke the constructors of the instance variable class objects (parked car and parking meter).
+Another approach would be to use aggregation (weak “has-a” relationship) where the parked car and parking meter objects are created independently and references to these objects are stored as the instance variables for the police officer class. In this case, the parked car and parking meter objects would invoke their own constructors and only the object references need to be supplied to the police office constructor. Either approach would be an acceptable implementation for this system.
+Note that the parking ticket object has a weak dependency relationship with the police office object, meaning that it is conditionally created by the police office object (with the new operator) and then discarded (with the delete operator) by the police officer object immediately after the ticket information has been displayed.
+Test Program
+To test this system, write a client program that will model various scenarios that the parking system may need to accommodate. For example:
+Scenario 1: A Car Is Parked Legally
+1. A ParkedCar object is created with attributes (make: Toyota, model: Camry, color: Red, license: XYZ123, parked minutes: 30).
+2. A ParkingMeter object is created with purchased time of 40 minutes.
+3. A PoliceOfficer object (Officer John Doe, Badge 5678) inspects the car.
+4. The officer compares the parked minutes (30) with the purchased time (40).
+5. Since the car is legally parked (30 ≤ 40), no ticket is issued.
