@@ -1,0 +1,34 @@
+Inside the GitHub repository for the Date Class from the previous assignment, create a new branch where you will add functionality to the class by overloading these operators to work with the class:
+++
+Prefix and postfix increment operators. These operators should increment the object’s day member.
+--
+Prefix and postfix decrement operators. These operators should decrement the object’s day member.
+-
+Subtraction operator. If one Date object is subtracted from another, the operator should give the number of days between the two dates. For example, if April 10, 2014 is subtracted from April 18, 2014, the result will be 8.
+<<
+cout’s stream insertion operator. This operator should cause the date to be displayed in the form April 18, 2018
+>>
+cin’s stream extraction operator. This operator should prompt the user for a date to be stored in a Date object.
+ 
+The class should detect the following conditions and handle them accordingly:
+• When a date is set to the last day of the month and incremented, it should become the first day of the following month.
+• When a date is set to December 31 and incremented, it should become January 1 of the following year.
+• When a day is set to the first day of the month and decremented, it should become the last day of the previous month.
+• When a date is set to January 1 and decremented, it should become December 31 of the previous year.
+Write a test plan that does the following:
+1. Create a date object using the default constructor and display the date using the first date format.
+2. Create a date object using the constructor with parameters and display the date using the second date format.
+3. Use one of your date objects to test the setDate() function and display the result using the third date format.
+4. Use setDate() to set the date to  13/45/2018 and verify that this date is not accepted.
+5. Use setDate() to set the date to 4/31/2000 and verify that this date is not accepted.
+6. Use setDate() to set the date to 2/29/2009 and verify that this date is not accepted.
+7. Set the first date object to 4/10/2014 and the second date object to 4/18/2014 subtract the second date from the first date, the result should be 8 days.
+8. Set the first date to 2/2/2006 and the second date to 11/10/2003, subtract the second date from the first date, the result should be 815 days.
+9. Set the date to 2/29/2008, use the pre-decrement operator, and print the date using one of the print formats, and verify that the date is set to 1/31/2008.
+10. Use the pre-increment operator, print the date using one of the print formats, and verify that it is set to back to 2/29/2008.
+11. Repeat the previous two steps using the post-decrement and post-increment operators.
+12. Set the date to 12/31/2024, use the post-increment operator, print the date using one of the print formats, and verify that the date is set to 1/1/2025.
+13. Use the post-decrement operator, print the date using one of the print formats, and verify that the date is set back to 12/31/2024.
+14. Repeat the previous two steps using the pre-increment and pre-decrement operators.
+15. Use cin and the >> operator to read a date typed in at the keyboard.
+16. Use cout and the << operator to display the date that was read from the keyboard.
