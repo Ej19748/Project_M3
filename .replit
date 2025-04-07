@@ -78,4 +78,4 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd date_class_overload && make && ./main"
+args = "cd Project_M4/date_class && make && ./main"
